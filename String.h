@@ -16,6 +16,7 @@ void toLowerCase(String *str);
 void print(String * str);
 void freeMemory(String * str);
 int compareString(String * strOne, String *strTwo);
+int starstWith(String * str, const char * data);
 size_t my_copyString(const char *origem, char *destino);
 size_t my_strlen(const char *text);
 #endif

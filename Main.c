@@ -3,9 +3,14 @@
 
 int main(int argc, char const *argv[])
 {
-    String nome = createString("halley");
+     String nome = createString("zard vancete");
+    printf("e real ? \n%i\n", starstWith(&nome, "za"));   // Vai imprimir 1 (true)
+    printf("e real ? \n%i\n", starstWith(&nome, "zan"));    // Vai imprimir 0 (false)
+
     String teste= createString("halley");
   
+
+
     printf("%s \n", nome.data);
     setString(&nome, "zard");
     printf("new name is: \n%s\n", nome.data);
@@ -17,6 +22,7 @@ int main(int argc, char const *argv[])
     int resultado = compareString(&teste, &nome);
     printf("sao iguais? \n %i \n", resultado);
     print(&teste);
+
     freeMemory(&nome);
     return 0;
 }

@@ -69,6 +69,17 @@ int compareString(String * strOne, String *strTwo){
     return 0;
 }
 
+int starstWith(String *str, const char *prefix) {
+    size_t prefixLength = my_strlen(prefix);
+    if (prefixLength > str->length) return 0; 
+
+    for (size_t i = 0; i < prefixLength; i++) {
+        if (str->data[i] != prefix[i]) return 0;  
+    }
+    return 1; 
+}
+
+
 
 void print(String * str){
     if(str->data != NULL){
