@@ -10,5 +10,6 @@ typedef struct
 
 String createString(const char * data);
 void setString(String * str, const char * data);
+void concatString(String * str, const char * data);
 void freeMemory(String * str);
 #endif

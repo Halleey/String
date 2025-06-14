@@ -22,6 +22,20 @@ void setString(String *str, const char *data) {
     }
 }
 
+void concatString(String * str, const char * nConcat){
+    size_t extraLength = my_strlen(nConcat);
+    size_t newLength = str->length + extraLength;
+    char * data = malloc(newLength +1);
+    if(data != NULL){
+        my_copyString(str->data, data);
+        my_copyString(nConcat, data + str->length);
+        free(str->data);
+        str->data = data;
+        str->length = newLength;
+    }
+
+}
+
 size_t my_strlen(const char *text) {
     size_t length = 0;
     while (text[length] != '\0') length++;
