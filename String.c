@@ -69,6 +69,13 @@ int compareString(String * strOne, String *strTwo){
     return 0;
 }
 
+
+void print(String * str){
+    if(str->data != NULL){
+        printf(*str);
+    }
+}
+
 size_t my_strlen(const char *text) {
     size_t length = 0;
     while (text[length] != '\0') length++;

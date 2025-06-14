@@ -15,7 +15,8 @@ int main(int argc, char const *argv[])
     toLowerCase(&nome);
     printf("apos lower: \n%s", nome.data);
     int resultado = compareString(&teste, &nome);
-    printf("sao iguais? \n %i", resultado);
+    printf("sao iguais? \n %i \n", resultado);
+    print(&teste);
     freeMemory(&nome);
     return 0;
 }
