@@ -8,7 +8,10 @@ int main(int argc, char const *argv[])
     setString(&nome, "zard");
     printf("new name is: \n%s\n", nome.data);
     concatString(&nome, " vancete");
+    toUpperCase(&nome);
     printf("apos concat: \n%s", nome.data);
+    toLowerCase(&nome);
+    printf("apos lower: \n%s", nome.data);
     freeMemory(&nome);
     return 0;
 }

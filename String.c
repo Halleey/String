@@ -36,6 +36,28 @@ void concatString(String * str, const char * nConcat){
 
 }
 
+void toUpperCase(String *str){
+    int i;
+    for(i = 0; i < str->length; i++){
+        if(str->data[i] >= 'z' || str->data[i]<= 'z' ){
+            str->data[i] = str->data[i] - ('a' - 'A'); 
+        }
+    }
+}
+
+
+void toLowerCase(String *str){
+    int i;
+    for(i = 0; i < str->length; i++){
+        if(str->data[i] >= 'A' || str->data[i]<= 'Z' ){
+            str->data[i] = str->data[i] - ('A' - 'a'); 
+        }
+    }
+}
+
+
+
+
 size_t my_strlen(const char *text) {
     size_t length = 0;
     while (text[length] != '\0') length++;
