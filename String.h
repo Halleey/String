@@ -9,6 +9,5 @@ typedef struct
 }String;
 
 String createString(const char * data);
-void printString(String * str);
 void freeMemory(String * str);
 #endif
