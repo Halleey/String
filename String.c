@@ -56,7 +56,18 @@ void toLowerCase(String *str){
 }
 
 
-
+int compareString(String * strOne, String *strTwo){
+    if(strOne->length == strTwo->length){
+        int i;
+        for(i = 0; i<strOne->length; i++){
+            if(strOne->data[i] != strTwo->data[i]){
+                return 0;
+            }
+        }
+        return 1;
+    }
+    return 0;
+}
 
 size_t my_strlen(const char *text) {
     size_t length = 0;
