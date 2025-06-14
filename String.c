@@ -12,6 +12,16 @@ String createString(const char *text) {
     return str;
 }
 
+void setString(String *str, const char *data) {
+    freeMemory(str);
+
+    str->length = my_strlen(data);
+    str->data = malloc(str->length+1);
+    if(str->data != NULL){
+        my_copyString(data, str->data);
+    }
+}
+
 size_t my_strlen(const char *text) {
     size_t length = 0;
     while (text[length] != '\0') length++;
