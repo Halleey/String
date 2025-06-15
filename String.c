@@ -1,6 +1,6 @@
 #include <stdlib.h> //malloc e afins
 #include "String.h"
-
+#include <stdio.h>
 
 String createString(const char *text) {
     String str;
@@ -22,19 +22,19 @@ void setString(String *str, const char *data) {
     }
 }
 
-void concatString(String * str, const char * nConcat){
+void concatString(String *str, const char *nConcat) {
     size_t extraLength = my_strlen(nConcat);
     size_t newLength = str->length + extraLength;
-    char * data = malloc(newLength +1);
-    if(data != NULL){
-        my_copyString(str->data, data);
-        my_copyString(nConcat, data + str->length);
+    char *data = malloc(newLength + 1); 
+    if (data != NULL) {
+        my_copyString(str->data, data);            
+        my_copyString(nConcat, data + str->length); 
         free(str->data);
         str->data = data;
         str->length = newLength;
     }
-
 }
+
 
 void toUpperCase(String *str){
     int i;
@@ -69,7 +69,7 @@ int compareString(String * strOne, String *strTwo){
     return 0;
 }
 
-int starstWith(String *str, const char *prefix) {
+int startWith(String *str, const char *prefix) {
     size_t prefixLength = my_strlen(prefix);
     if (prefixLength > str->length) return 0; 
 
@@ -93,12 +93,13 @@ void reverseString(String *str)
     }
 }
 
-void print(String * str){
-    if(str->data != NULL){
-        printf(*str);
+void print(String *str) {
+    if (str != NULL && str->data != NULL) {
+        printf("%s\n", str->data);
+    } else {
+        printf("(string vazia)\n");
     }
 }
-
 
 
 size_t my_strlen(const char *text) {
