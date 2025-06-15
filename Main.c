@@ -22,7 +22,8 @@ int main(int argc, char const *argv[])
     int resultado = compareString(&teste, &nome);
     printf("sao iguais? \n %i \n", resultado);
     print(&teste);
-
+    reverseString(&nome);
+    printf("\n apos reverter %s\n", nome.data);
     freeMemory(&nome);
     return 0;
 }

@@ -79,13 +79,27 @@ int starstWith(String *str, const char *prefix) {
     return 1; 
 }
 
+void reverseString(String *str)
+{
+     size_t i = 0;
+    size_t j = str->length -1;
+    while (i < j){
 
+        char temp = str->data[i];
+        str->data[i] = str->data[j];
+        str->data[j] = temp;
+      i++;
+      j--;
+    }
+}
 
 void print(String * str){
     if(str->data != NULL){
         printf(*str);
     }
 }
+
+
 
 size_t my_strlen(const char *text) {
     size_t length = 0;
