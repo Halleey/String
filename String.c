@@ -35,26 +35,26 @@ void concatString(String *str, const char *nConcat) {
     }
 }
 
-
-void toUpperCase(String *str){
+//arrumar outro dia.
+void toUpperCase(String *str) {
     int i;
-    for(i = 0; i < str->length; i++){
-        if(str->data[i] >= 'z' || str->data[i]<= 'z' ){
+    for (i = 0; i < str->length; i++) {
+        if (str->data[i] >= 'a' && str->data[i] <= 'z') {
             str->data[i] = str->data[i] - ('a' - 'A'); 
         }
     }
 }
 
 
-void toLowerCase(String *str){
+
+void toLowerCase(String *str) {
     int i;
-    for(i = 0; i < str->length; i++){
-        if(str->data[i] >= 'A' || str->data[i]<= 'Z' ){
+    for (i = 0; i < str->length; i++) {
+        if (str->data[i] >= 'A' && str->data[i] <= 'Z') {
             str->data[i] = str->data[i] - ('A' - 'a'); 
         }
     }
 }
-
 
 int compareString(String * strOne, String *strTwo){
     if(strOne->length == strTwo->length){
@@ -81,8 +81,8 @@ int startWith(String *str, const char *prefix) {
 
 void reverseString(String *str)
 {
-     size_t i = 0;
-    size_t j = str->length -1;
+    int  i = 0;
+    int j = str->length -1;
     while (i < j){
 
         char temp = str->data[i];
